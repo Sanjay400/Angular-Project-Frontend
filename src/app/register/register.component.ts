@@ -26,7 +26,7 @@ export class RegisterComponent {
     if (this.registerForm.valid) {
       const userData = this.registerForm.value;
 
-      this.http.post('http://localhost:3000/users', userData)
+      this.http.post('https://nodeuser.onrender.com/users', userData)
         .subscribe(() => {
           localStorage.setItem('user', JSON.stringify(userData));
 

@@ -25,7 +25,7 @@ export class LoginComponent {
   onLoginSubmit() {
     if (this.loginForm.valid) {
       const { email, password } = this.loginForm.value;
-      this.http.get<any[]>(`http://localhost:3000/users?email=${email}&password=${password}`)
+      this.http.get<any[]>(`https://nodeuser.onrender.com/users?email=${email}&password=${password}`)
         .subscribe(users => {
           if (users.length > 0) {
             const user = users[0];
